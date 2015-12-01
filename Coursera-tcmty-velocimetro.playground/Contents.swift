@@ -2,7 +2,7 @@
 
 import UIKit
 
-
+//Declaración de la enumeración
 enum Velocidades : Int{
     
     case Apagado = 0, VelocidadBaja = 20, VelocidadMedia = 50, VelocidadAlta = 120
@@ -23,11 +23,13 @@ class Auto{
         velocidad = Velocidades(velocidadInicial: Velocidades.Apagado)
     }
     
+    //Función con devolución de una tupla
     func cambioDeVelocidad() -> (Int, String){
         
         let velocidadActualDelAuto = velocidad.rawValue
         var velocidadEnNombre : String
         
+        //Asignación de nuevos valores
         switch velocidad{
             
         case Velocidades.Apagado:
